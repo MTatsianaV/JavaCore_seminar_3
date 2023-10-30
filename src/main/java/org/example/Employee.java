@@ -2,7 +2,7 @@ package org.example;
 import java.util.Comparator;
 
 public class Employee {
-    private static final int CURRENT_YEAR = 2022;
+    private static final int CURRENT_YEAR = 2023;
     String name;
     String midName;
     String surName;
