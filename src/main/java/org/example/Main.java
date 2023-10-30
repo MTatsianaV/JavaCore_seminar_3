@@ -3,6 +3,7 @@ package org.example;
 import java.util.Arrays;
 
 import static org.example.Employee.dateComparator;
+import static org.example.Employee.increaseSalaryForOlderEmployees;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
@@ -35,9 +36,10 @@ public class Main {
         System.out.println("Average salary: " + averageSalary(company));
 
         sergey.increaseSalaryForEmployees(company, 1000);
+        increaseSalaryForOlderEmployees(company, 45, 500);
 
         for (int i = 0; i < company.length; i++) {
-            company[i].info();
+            System.out.println(company[i].getInfo());
         };
 
 

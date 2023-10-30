@@ -91,8 +91,26 @@ public class Employee {
                 + position + ", phone: " + phone + ", salary: " + salary + ", age: " + getAge());
     }
 
+    public void printInfo() {
+        System.out.printf("Employee: %s %s %s, position: %s, phone: %s, salary: %d, age: %d%n",
+                name, midName, surName, position, phone, salary, getAge());
+    }
+
+    public String getInfo() { // возврат значения
+        return String.format("Employee: %s %s %s, position: %s, phone: %s, salary: %d, age: %d",
+                name, midName, surName, position, phone, salary, getAge());
+    }
+
     public void increaseSalary(int amount) {
         this.salary += amount;
+    }
+
+    public static void increaseSalaryForOlderEmployees(Employee[] employees, int age, int amount) {
+        for (Employee employee : employees) {
+            if (employee.getAge() > age) {
+                employee.setSalary(employee.getSalary() + amount);
+            }
+        }
     }
 
     public static Comparator<Employee> dateComparator = new Comparator<Employee>() {
